@@ -38,4 +38,12 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var bodyParser = require('body-parser');
+   app.use(bodyParser.urlencoded({
+     extended: true
+   }));
+   app.use(
+     bodyParser.text() 
+   );
+
 module.exports = app;

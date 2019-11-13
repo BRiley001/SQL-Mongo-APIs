@@ -38,12 +38,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var bodyParser = require('body-parser');
-   app.use(bodyParser.urlencoded({
-     extended: true
-   }));
-   app.use(
-     bodyParser.text() 
-   );
 
+const PORT = 3000;
+app.listen(PORT, ()=> console.log(`running on port ${PORT}`) );
 module.exports = app;
